@@ -1,0 +1,11 @@
+/* Media queries for the app css */
+
+/* Medium breakpoint - 768px */
+@media screen and (max-width: 768px ) {
+    .dashboard-layout .sidebar{
+        position: absolute;
+        background: #000 ;
+    }
+
+    
+}

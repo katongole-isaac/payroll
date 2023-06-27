@@ -1,0 +1,100 @@
+/* Dashboard Layout styles */
+/* Variable are found in globals.css */
+
+.dashboard-layout .sidebar{
+   max-width: var(--sidebar-wdith);
+   width: var(--sidebar-wdith);
+   padding: var(--appbar-height) 0em;
+   height: 100%;
+   transition: width 0.2s ease-in-out;
+   border-right: 1px solid #ccc;
+   overflow-y: auto;
+   background: #001427;
+   
+}
+
+
+.dashboard-layout .sidebar::-webkit-scrollbar {
+    width: 2px;
+    background: #fff;
+}
+
+.dashboard-layout .sidebar::-webkit-scrollbar-thumb {
+    background: #888;   
+    border-radius: 20px;
+    
+}
+
+.dashboard-layout .sidebar > * {
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.5s;
+}
+
+
+.dashboard-layout .sidebar-close  {
+    width: 0;
+    overflow: hidden;
+}
+
+.dashboard-layout .sidebar-close  > * {
+    /* display: none; */
+}
+
+.dashboard-layout .sidebar-open {
+   width: var(--sidebar-wdith);
+  
+}
+.dashboard-layout .sidebar-open > * {
+    max-height: max-content;
+}
+
+.dashboard-layout .sidebar .nav_item {
+    
+    background: rgb(204, 204, 204, 0.03);
+    padding: 0.5em 2em;
+    min-width: 75%;
+    border-radius: 0 20px 20px 0 ;
+    margin-bottom: 0.5em;
+    transition: background 0.2s;
+}
+
+.dashboard-layout .sidebar .nav_item.active {
+    font-weight: 700;
+    background: rgb(204, 204, 204, 0.5);
+}
+
+.dashboard-layout .sidebar .nav_item:hover {
+    background: rgb(204, 204, 204, 0.4);
+
+}
+
+.dashboard-layout .sidebar .nav_item  a {
+    color: white;
+}
+
+.dashboard-layout .sidebar .nav_item .d-flex {
+    gap: 1em;
+    align-items: center;
+
+}
+
+.dashboard-layout main {
+    height: 100vh;
+    overflow-y: auto;
+    flex:  1;
+}
+
+/* Upper top nav for the dashboard */
+.dashboard-layout .appbar {
+    height: var(--appbar-height);
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+.dashboard-layout .main_outlet {
+    padding: 1em;
+   min-height: calc(100vh - var( --appbar-height));
+   /* background: #ccc; */
+}
